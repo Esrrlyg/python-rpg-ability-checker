@@ -15,10 +15,10 @@ def choose_job():
             if 1 <= choice <= len(job_config.jobs):
                 return job_config.jobs[choice - 1]
 
-            show_error("Invalid job selection.")
+            ui.show_error("Invalid job selection.")
 
         except ValueError:
-            show_error("Please enter a number only.")
+            ui.show_error("Please enter a number only.")
 
 def choose_subjob(main_job):
     while True:
@@ -41,10 +41,10 @@ def choose_subjob(main_job):
             if 1 <= choice <= len(available_subjobs):
                 return available_subjobs[choice - 1]
 
-            show_error("Invalid subjob selection.")
+            ui.show_error("Invalid subjob selection.")
 
         except ValueError:
-            show_error("Please enter a number only.")
+            ui.show_error("Please enter a number only.")
 
 def choose_level(job):
     while True:
@@ -55,7 +55,7 @@ def choose_level(job):
             if level >= 1:
                 return level
 
-            show_error("Level must be greater than 0")
+            ui.show_error("Level must be greater than 0")
 
         except ValueError:
-            show_error("Please enter a number only.")
+            ui.show_error("Please enter a number only.")

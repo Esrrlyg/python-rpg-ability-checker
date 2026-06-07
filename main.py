@@ -6,7 +6,7 @@ def main():
     job = choices.choose_job()
     subjob = choices.choose_subjob(job)
     while not engine.is_valid_subjob(job, subjob):
-        show_error(f"{subjob} cannot be combined with {job}")
+        ui.show_error(f"{subjob} cannot be combined with {job}")
         subjob = choices.choose_subjob(job)
     level = choices.choose_level(job)
     actions = engine.build_actions(job, level, subjob)
