@@ -29,4 +29,7 @@ def main():
     ui.show_actions(job, subjob, actions)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n\nExiting... Goodbye!")
