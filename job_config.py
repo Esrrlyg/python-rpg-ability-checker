@@ -1,3 +1,22 @@
+"""
+Central job configuration for the RPG job system.
+
+Attributes:
+    jobs (list[str]):
+        List of all playable jobs.
+
+    job_skills (dict[str, list[tuple[int, str]]]):
+        Skills available to each job, mapped to the level at which
+        they are unlocked.
+
+    job_tags (dict[str, set[str]]):
+        Descriptive tags used for categorisation and compatibility
+        checks.
+
+    incompatible_subjobs (dict[str, set[str]]):
+        Jobs that cannot be selected as a subjob for a given main job.
+"""
+
 jobs = [
     "Freelancer", 
     "Fighter", 

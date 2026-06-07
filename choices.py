@@ -1,7 +1,21 @@
+"""
+User input and selection handlers for the RPG job system.
+
+This module provides interactive terminal prompts for selecting
+main jobs, subjobs, and character levels, with validation and
+error handling via the UI module.
+"""
+
 import ui
 import job_config
 
 def choose_job():
+    """
+    Prompt the user to select a main job from the available list.
+
+    Returns:
+        str: The selected job name.
+    """
     while True:
         ui.clear()
         try:
@@ -21,6 +35,15 @@ def choose_job():
             ui.show_error("Please enter a number only.")
 
 def choose_subjob(main_job):
+    """
+    Prompt the user to select a subjob, excluding the main job.
+
+    Args:
+        main_job (str): The currently selected main job.
+
+    Returns:
+        str | None: The selected subjob, or None if no subjob is chosen.
+    """
     while True:
         ui.clear()
         try:
@@ -47,6 +70,15 @@ def choose_subjob(main_job):
             ui.show_error("Please enter a number only.")
 
 def choose_level(job):
+    """
+    Prompt the user to enter the character level for a given job.
+
+    Args:
+        job (str): The job being assigned a level.
+
+    Returns:
+        int: The validated level (>= 1).
+    """
     while True:
         ui.clear()
         try:
