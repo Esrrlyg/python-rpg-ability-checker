@@ -59,3 +59,4 @@ def choose_level(job):
 
         except ValueError:
             ui.show_error("Please enter a number only.")
+            
